@@ -1,3 +1,5 @@
+import 'package:dialog_box/bottomDialogBoxScreen.dart';
+import 'package:dialog_box/dialogScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,38 +34,12 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-                child: Text('Dialog Box'),
-                onPressed: () {
-                  showDialog(
-                      context: context,
-                      builder: (context) {
-                        return Container(
-                          child: AlertDialog(
-                            actions: [
-                              TextButton(
-                                  onPressed: () {
-                                    Navigator.pop(context);
-                                  },
-                                  child: Text('Ok'))
-                            ],
-                            title: Text("Password Changed."),
-                          ),
-                        );
-                      });
-                }),
-          ],
-        ),
-      ),
+    return MaterialApp(
+      initialRoute: 'bottomDialogBox',
+      routes: {
+        'dialogBox': (context) => DialogScreen(),
+        'bottomDialogBox': (context) => BottomDialogBox()
+      },
     );
   }
 }
