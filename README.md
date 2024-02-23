@@ -7,4 +7,4 @@
 
 Bottom Tab Dialog
 
-file:///home/info/Pictures/Screenshots/Screenshot%20from%202024-02-23%2015-40-55.png
+![](https://github.com/atulvesu/AlertDialogWidget-Flutter/assets/157306983/2d75e8ca-4511-45db-8015-f7c34a7dddac)
